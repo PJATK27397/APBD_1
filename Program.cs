@@ -11,13 +11,13 @@ static double CalculataAverage(int[] numbers)
     if (numbers == null || numbers.Length == 0)
         throw new ArgumentException("Tablica nie może być pusta.");
 
-    double sum = 0;
+    double sumka = 0;
     foreach (int num in numbers)
     {
-        sum += num;
+        sumka += num;
     }
 
-    return sum / numbers.Length;
+    return sumka / numbers.Length;
 }
 
 
