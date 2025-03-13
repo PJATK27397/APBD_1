@@ -4,6 +4,7 @@ Console.WriteLine("21");
 
 int[] numbers = {1, 2, 3, 4, 5};
 Console.WriteLine("Average: " + CalculataAverage(numbers));
+Console.WriteLine("Max: " + FindMaxValue(numbers));
 
 static double CalculataAverage(int[] numbers)
 {
@@ -17,4 +18,13 @@ static double CalculataAverage(int[] numbers)
     }
 
     return sum / numbers.Length;
+}
+
+
+static double FindMaxValue(int[] numbers)
+{
+    if (numbers == null || numbers.Length == 0)
+        throw new ArgumentException("Array cannot be null or empty");
+
+    return numbers.Max();
 }
